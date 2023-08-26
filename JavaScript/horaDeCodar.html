@@ -44,7 +44,8 @@
         };
         exercicio2.addEventListener('click', () => exibeNomeUsario());
 
-        // Escreva um programa em Javascript em que o usuário informe o seu nome e em seguida o programa perguntará a idade do usuário. Agora o programa deve exibir a mensagem "Olá, [NomeDoUsuario], sua idade é [idade]".
+        // Escreva um programa em Javascript em que o usuário informe o seu nome
+        //  e em seguida o programa perguntará a idade do usuário. Agora o programa deve exibir a mensagem "Olá, [NomeDoUsuario], sua idade é [idade]".
         const exibeNomeIdade = () => {
             const nome = prompt('Digite seu nome');
             const idade = prompt('Digite sua idade');
@@ -57,6 +58,8 @@
         const calculaAreaRetanglo = () => {
             const base = prompt('Digite o valor da base');
             const altura = prompt('Digite o valor da altura');
+
+            console.log(typeof base);
 
             const area = base * altura;
 
@@ -87,9 +90,9 @@
 
         // Calcular area do losango
         const calculaAreaTrapezio = () => {
-            const baseMaior = prompt('Digite o valor da base maior');
-            const baseMenor = prompt('Digite o valor da base menor');
-            const altura = prompt('Digite o valor da altura');
+            const baseMaior = parseInt(prompt('Digite o valor da base maior'));
+            const baseMenor = parseInt(prompt('Digite o valor da base menor'));
+            const altura = parseInt(prompt('Digite o valor da altura'));
 
             const area = ((baseMaior + baseMenor) * altura) / 2;
 

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 2 - A Vingança do Coder</title>
+</head>
+<body>
+    <button class="exercicio1">Exercicio 1</button>
+    <button class="exercicio2">Exercicio 2</button>
+    <button class="exercicio3">Exercicio 3</button>
+    <button class="exercicio4">Exercicio 4</button>
+    <button class="exercicio5">Exercicio 5</button>
+    <button class="exercicio6">Exercicio 6</button>
+    <button class="exercicio7">Exercicio 7</button>
+    <button class="exercicio8">Exercicio 8</button>
+    <button class="exercicio9">Exercicio 9</button>
+    <button class="exercicio10">Exercicio 10</button>
+    <button class="exercicio11">Exercicio 11</button>
+
+    <script>
+        const exercicio1 = document.querySelector('.exercicio1');
+        const exercicio2 = document.querySelector('.exercicio2');
+        const exercicio3 = document.querySelector('.exercicio3');
+        const exercicio4 = document.querySelector('.exercicio4');
+        const exercicio5 = document.querySelector('.exercicio5');
+        const exercicio6 = document.querySelector('.exercicio6');
+        const exercicio7 = document.querySelector('.exercicio7');
+        const exercicio8 = document.querySelector('.exercicio8');
+        const exercicio9 = document.querySelector('.exercicio9');
+        const exercicio10 = document.querySelector('.exercicio10');
+        const exercicio11 = document.querySelector('.exercicio11');
+
+        // 1. Escreva um programa em que o usuário informe dois números utilizando o 
+        // "prompt". Então escreva em tela o maior deles.
+
+        const exibeMaiorNumero = () => {
+            alert('Digite dois numeros para saber o mais deles!');
+            const numero1 = parseInt(prompt('Digite o primeiro numero'));
+            const numero2 = parseInt(prompt('Digite o segundo numero'));
+
+            if (numero1 > numero2) {
+                alert(`O maior numero é ${numero1}`);
+            } else {
+                alert(`O maior numero é ${numero2}`);
+            }
+        };
+        exercicio1.addEventListener('click', () => exibeMaiorNumero());
+
+        // 2. Faça um programa que leia um valor informado pelo usuário e 
+        // diga se o valor informado é positivo, negativo ou zero.
+        const exibeValorNumero = () => {
+            alert('Informe um numero e saiba se ele é positivo, negativo ou zero');
+            const numero = parseFloat(prompt('Digite um numero'));
+
+            if (numero == 0) {
+                alert(`O valor de ${numero} é ZERO`);
+            } else if (numero < 0) {
+                alert(`O valor de ${numero} é NEGATIVO`);
+            } else {
+                alert(`O valor de ${numero} é POSITIVO`);
+            }
+        };
+        exercicio2.addEventListener('click', () => exibeValorNumero());
+
+        // 3. Faça um programa para ler 3 valores 
+        // (considere que não serão informados valores iguais) e escrever o maior deles.
+        const exibeMaiorDeTres = () => {
+            alert('Digite tres numeros para saber o mais deles!');
+            const numero1 = parseFloat(prompt('Digite o primeiro numero'));
+            const numero2 = parseFloat(prompt('Digite o segundo numero'));
+            const numero3 = parseFloat(prompt('Digite o terceiro numero'));
+
+            if (numero1 == numero2 && numero2 == numero3) {
+                alert(`NAO DIGITE VALORES IGUAIS!`);
+            } else if (numero1 > numero2 && numero1 > numero3) {
+                alert(`O maior numero é ${numero1}`);
+            } else if (numero2 > numero1 && numero2 > numero3) {
+                alert(`O maior numero é ${numero2}`);
+            } else {
+                alert(`O maior numero é ${numero3}`);
+            }
+        };
+        exercicio3.addEventListener('click', () => exibeMaiorDeTres());
+
+        // 4. Faça um programa que leia 3 valores informados pelo 
+        // usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+        const somaMaiorDeTres = () => {
+            alert('Digite tres numeros para saber a soma dos dois maiores!');
+            const numero1 = parseInt(prompt('Digite o primeiro numero'));
+            const numero2 = parseInt(prompt('Digite o segundo numero'));
+            const numero3 = parseInt(prompt('Digite o terceiro numero'));
+
+            if (numero1 == numero2 && numero2 == numero3) {
+                alert(`NAO DIGITE VALORES IGUAIS!`);
+            } else if (numero1 > numero2 && numero2 > numero3) {
+                const soma = parseInt(numero1) + parseInt(numero2);
+                alert(`A soma dos dois maiores numero (${numero1}, ${numero2}) é: ${soma}`);
+            } else if (numero2 > numero1 && numero3 > numero2) {
+                const soma = parseInt(numero2) + parseInt(numero3);
+                alert(`A soma dos dois maiores numero (${numero2}, ${numero3}) é: ${soma}`);
+            } else if (numero3 > numero2 && numero1 > numero2) {
+                const soma = numero3 + numero1;
+                alert(`A soma dos dois maiores numero (${numero3}, ${numero1}) é: ${soma}`);
+            }
+        };
+        exercicio4.addEventListener('click', () => somaMaiorDeTres());
+
+        // 5.  Faça um programa que leia 6 valores informados pelo usuário, 
+        // calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+        const calculaMedia = () => {
+            alert('Digite seis notas para saber a media aritimetica');
+            const nota1 = parseInt(prompt('Digite a primeira nota'));
+            const nota2 = parseInt(prompt('Digite a segunda nota'));
+            const nota3 = parseInt(prompt('Digite a terceira nota'));
+            const nota4 = parseInt(prompt('Digite a quarta nota'));
+            const nota5 = parseInt(prompt('Digite a quinta nota'));
+            const nota6 = parseInt(prompt('Digite a sexta nota'));
+
+            const media = (nota1 + nota2 + nota3 + nota4 + nota5 + nota6) / 6;
+
+            alert(`A media aritimetica é ${media}`);
+        };
+        exercicio5.addEventListener('click', () => calculaMedia());
+
+        // 6. Faça um programa que receba quatro valores informados pelo usuário, 
+        // mas informe somente o primeiro, o último e o maior de todos 
+        // eles (considere que todos os números informados serão diferentes)
+        const exibePrimeiroEultimo = () => {
+            alert('Digite 4 numeros para saber o primeiro, o ultimo e o maior de todos');
+            const numero1 = parseInt(prompt('Digite o primeiro numero'));
+            const numero2 = parseInt(prompt('Digite o segundo numero'));
+            const numero3 = parseInt(prompt('Digite o terceiro numero'));
+            const numero4 = parseInt(prompt('Digite o quarto numero'));
+
+            if (numero1 == numero2 && numero2 == numero3 && numero3 == numero4) {
+                alert(`NAO DIGITE VALORES IGUAIS!`);
+            } else if (numero1 > numero2 && numero1 > numero3 && numero1 > numero4) {
+                alert(`O primeiro numero é ${numero1}. O ultimo é ${numero4}. E o maior numero é ${numero1}`);
+            } else if (numero2 > numero1 && numero2 > numero3 && numero2 > numero4) {
+                alert(`O primeiro numero é ${numero1}. O ultimo é ${numero4}. E o maior numero é ${numero2}`);
+            } else if (numero3 > numero1 && numero3 > numero2 && numero3 > numero4) {
+                alert(`O primeiro numero é ${numero1}. O ultimo é ${numero4}. E o maior numero é ${numero3}`);
+            } else {
+                alert(`O primeiro numero é ${numero1}. O ultimo é ${numero4}. E o maior numero é ${numero4}`);
+            }
+        };
+        exercicio6.addEventListener('click', () => exibePrimeiroEultimo());
+
+        // 7. Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos
+        // com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também
+        // todos valores que o usuário informou.  
+        const soma6numeros = () => {
+            alert('Digite 6 numeros para saber a soma de todos com valor inferior a 72');
+            const numero1 = parseInt(prompt('Digite o primeiro numero'));
+            const numero2 = parseInt(prompt('Digite o segundo numero'));
+            const numero3 = parseInt(prompt('Digite o terceiro numero'));
+            const numero4 = parseInt(prompt('Digite o quarto numero'));
+            const numero5 = parseInt(prompt('Digite o quinto numero'));
+            const numero6 = parseInt(prompt('Digite o sexto numero'));
+            let soma = 0;
+
+            if (numero1 < 72) {
+                soma = soma + numero1;
+            } if (numero2 < 72) {
+                soma = soma + numero2;
+            } if (numero3 < 72) {
+                soma = soma + numero3;
+            } if (numero4 < 72) {
+                soma = soma + numero4;
+            } if (numero5 < 72) {
+                soma = soma + numero5;
+            } if (numero6 < 72) {
+                soma = soma + numero6;
+            }
+
+            alert(`A soma dos 6 numeros é ${soma}`);
+        };
+        exercicio7.addEventListener('click', () => soma6numeros());
+
+        // 8. Escreva um programa que calcule a média de quatro números informados pelo usuário,
+        // mas somente se esses números forem maiores que 0 e menores que 10. No final, se a 
+        // média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer
+        // outra situação, ele receberá uma mensagem de "tente novamente"
+        const calculaMediaMensagem = () => {
+            alert('Digite 4 notas entre 1 e menores que 10');
+            const nota1 = parseFloat(prompt('Digite a primeira nota'));
+            const nota2 = parseFloat(prompt('Digite a segunda nota'));
+            const nota3 = parseFloat(prompt('Digite a terceira nota'));
+            const nota4 = parseFloat(prompt('Digite a quarta nota'));
+
+            if (nota1 > 1 && nota1 < 10 && nota2 > 1 && nota2 < 10 && nota3 > 1 && nota3 < 10 && nota4 > 1 && nota4 < 10) {
+                const media = (nota1 + nota2 + nota3 + nota4) / 4;
+                alert(`O valor de media é ${media}`);
+            } else {
+                alert('DIGITE AS NOTAS CORRETAMENTE!');
+            }
+        };
+        exercicio8.addEventListener('click', () => calculaMediaMensagem());
+
+        // 9. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma
+        // mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
+        const verificaIdadeVoto = () => {
+            alert('Digite o ano de nascimento para saber se voce tem direito a votar');
+            const anoNascimento = parseInt(prompt('Digite a idade'));
+
+            const idade = 2023 - anoNascimento;
+
+            if (idade < 16) {
+                alert(`Com ${idade} voce NAO votar.`);
+            } else {
+                alert(`Com ${idade} voce PODE pode votar.`);
+            }
+        };
+        exercicio9.addEventListener('click', () => verificaIdadeVoto());
+
+        // 10. Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino)
+        // de uma pessoa, construa um programa que calcule e imprima seu peso ideal, 
+        // utilizando as seguintes fórmulas: 
+        // feminino: (62.1 * altura) - 44.7
+        // masculino: (72.7 * altura) - 58
+        const verificaPesoIdeal = () => {
+            alert('Digite sua altura e sexo para saber o seu peso ideal');
+            const altura = parseFloat(prompt('Digite sua altura. EXEMPLO: 1.75'));
+            const sexo = prompt('Digite feminino ou masculino');
+
+            if (sexo == 'feminino') {
+                console.log(altura);
+                const pesoIdeal = (62.1 * altura) - 44.7;
+                alert(`O peso ideal para uma pessoa do sexo ${sexo} e altura ${altura} é: ${pesoIdeal}`);
+            } else if (sexo == 'masculino') {
+                const pesoIdeal = (72.7 * altura) - 58;
+                alert(`O peso ideal para uma pessoa do sexo ${sexo} e altura ${altura} é: ${pesoIdeal}`);
+            }
+        };
+        exercicio10.addEventListener('click', () => verificaPesoIdeal());
+
+        // 11. Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma
+        // das seguintes operações a serem executadas 
+        // (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).
+        // O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. 
+        const calculadora = () => {
+            alert('Digite 2 numeros para realizar uma operacao matematica');
+            const numero1 = parseInt(prompt('Digite o primeiro numero'));
+            const numero2 = parseInt(prompt('Digite o segundo numero'));
+            const operacao = prompt('Digite uma das 4 operacoes: Adição, Subtração, Divisão, Multiplicação');
+
+            if (operacao == 'Adição') {
+                const resultado = numero1 + numero2;
+                alert(`O resultado da ${operacao} de ${numero1} e ${numero2} é: ${resultado}`);
+            } else if (operacao == 'Subtração') {
+                const resultado = numero1 - numero2;
+                alert(`O resultado da ${operacao} de ${numero1} e ${numero2} é: ${resultado}`);
+            } else if (operacao == 'Divisão') {
+                const resultado = numero1 / numero2;
+                alert(`O resultado da ${operacao} de ${numero1} e ${numero2} é: ${resultado}`);
+            } else if (operacao == 'Multiplicação') {
+                const resultado = numero1 * numero2;
+                alert(`O resultado da ${operacao} de ${numero1} e ${numero2} é: ${resultado}`);
+            } else {
+                alert('DIGITE AS INFORMACOES CORRETAMENTE!');
+            }
+        };
+        exercicio11.addEventListener('click', () => calculadora());
+
+
+    </script>
+</body>
+</html>
