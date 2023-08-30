@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 3: De volta ao Código</title>
+</head>
+<body>
+    <button class="exercicio1">Exercicio 1</button>
+    <button class="exercicio2">Exercicio 2</button>
+    <button class="exercicio3">Exercicio 3</button>
+    <button class="exercicio4">Exercicio 4</button>
+    <button class="exercicio5">Exercicio 5</button>
+    <button class="exercicio6">Exercicio 6</button>
+
+    <script>
+        const exercicio1 = document.querySelector('.exercicio1');
+        const exercicio2 = document.querySelector('.exercicio2');
+        const exercicio3 = document.querySelector('.exercicio3');
+        const exercicio4 = document.querySelector('.exercicio4');
+        const exercicio5 = document.querySelector('.exercicio5');
+        const exercicio6 = document.querySelector('.exercicio6');
+
+        // 1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor 
+        // informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, 
+        // para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  
+        // O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor.
+        const funcaoExercicio1 = () => {
+            const numero1 = prompt('Digite qualquer numero');
+            let numero2 = prompt('Digite um numero maior que 0');
+
+            while (numero2 <= 0) {
+                numero2 = prompt('DIGITE UM NUMERO MAIOR QUE 0!');
+            }
+
+            const calculo = numero1 / numero2;
+            alert(`A divisao de ${numero1} por ${numero2} é: ${calculo}`);
+        };
+        exercicio1.addEventListener('click', funcaoExercicio1);
+
+        // 2 - Crie uma bomba relógio (usando somente código - para 
+        // deixar claro!) cuja contagem regressiva vá de 30 a 0. 
+        // Utilize "document.write" para escrever em tela e no final 
+        // da repetição escreva "EXPLOSÃO".
+        const funcaoExercicio2 = () => {
+            for (let i = 1; i <= 30; i++) {
+                document.write(`<p>CONTAGEM REGRESSIVA: ${i} <br></p>`);
+
+                if (i == 30) {
+                    document.write('<p>BOOOOOOMMM!!</p>');
+                }
+            }
+        };
+        exercicio2.addEventListener('click', funcaoExercicio2);
+
+        // 3 - Escreva um algoritmo para imprimir os números de 1 
+        // (inclusive) a 10 (inclusive) em ordem decrescente.
+        // Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+        const funcaoExercicio3 = () => {
+            for (let i = 1; i <= 10; i++) {
+                document.write(`<p>${i}</p>`);
+            }
+        };
+        exercicio3.addEventListener('click', funcaoExercicio3);
+
+        // 4 - Faça um algoritmo que calcule e escreva a média 
+        // aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+        const funcaoExercicio4 = () => {
+            let somaNumeros = 0;
+
+            for (let i = 15; i <= 100; i ++) {
+                somaNumeros += i;
+            }
+
+            const media = somaNumeros / 85;
+            document.write(`<p>A media dos numeros entre 15 e 100 é: ${media}</p>`);
+        };
+        exercicio4.addEventListener('click', funcaoExercicio4);
+
+        // 5 - Faça um algoritmo que calcule e escreva a média 
+        // aritmética dos dois números inteiros informados pelo usuário 
+        // e todos os números inteiros entre eles. Considere que o 
+        // primeiro sempre será menor que o segundo.
+        const funcaoExercicio5 = () => {
+            let numero1 = parseInt(prompt('Digite o primeiro numero'));
+            const numero2 = parseInt(prompt('Digite o segundo numero MAIOR que o primeiro'));
+            let somaNumeros = 0;
+
+            while (numero2 < numero1) {
+                numero1 = parseInt(prompt('DIGITE O SEGUNDO NUMERO MAIOR QUE O PRIMEIRO!'));
+            }
+
+            for (let i = numero1; i <= numero2; i++) {
+                somaNumeros += i;
+            }
+
+            const media = somaNumeros / (numero2 - numero1);
+
+            document.write(`<p>A media dos numeros entre ${numero1} e ${numero2} é: ${media}</p>`);
+        };
+        exercicio5.addEventListener('click', funcaoExercicio5);
+
+        // 6 - Escreva um programa para ler 2 notas de um aluno, 
+        // calcular e imprimir a média final. Considere que a nota de 
+        // aprovação é 9,5. Logo após escrever a mensagem "Calcular a 
+        // média de outro aluno Sim/Não?" e solicitar um resposta. Se a 
+        // resposta for "S", o programa deve ser executado novamente, 
+        // caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+
+        const funcaoExercicio6 = () => {
+            const nota1 = parseInt(prompt('Digite a primeira nota'));
+            const nota2 = parseInt(prompt('Digite a segunda nota'));
+
+            const media = (nota1 + nota2) / 2;
+
+            document.write(`<p>A media das notas ${nota1} e ${nota2} é: ${media}</p>`);
+
+            const calcularNovaMedia = prompt('Calcular a média de outro aluno S/N?');
+
+            if (calcularNovaMedia == 'S') funcaoExercicio6();
+        };
+        exercicio6.addEventListener('click', funcaoExercicio6);
+
+        // 7 - Escreva um algoritmo para ler as notas de avaliações de 
+        // um aluno, calcule e imprima a média (simples) desse aluno. 
+        // Só devem ser aceitos valores válidos durante a leitura (0 a 
+        // 10) para cada nota. São 6 notas ao total. Caso o valor 
+        // informado para qualquer uma das notas esteja fora do limite 
+        // estabelecido, deve ser solicitado um novo valor ao usuário. 
+        const funcaoExercicio7 = () => {
+            
+        };
+
+
+
+    </script>
+</body>
+</html>
