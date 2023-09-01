@@ -12,6 +12,11 @@
     <button class="exercicio4">Exercicio 4</button>
     <button class="exercicio5">Exercicio 5</button>
     <button class="exercicio6">Exercicio 6</button>
+    <button class="exercicio7">Exercicio 7</button>
+    <button class="exercicio8">Exercicio 8</button>
+    <button class="exercicio9">Exercicio 9</button>
+    <button class="exercicio10">Exercicio 10</button>
+    <button class="exercicio11">Exercicio 11</button>
 
     <script>
         const exercicio1 = document.querySelector('.exercicio1');
@@ -20,6 +25,11 @@
         const exercicio4 = document.querySelector('.exercicio4');
         const exercicio5 = document.querySelector('.exercicio5');
         const exercicio6 = document.querySelector('.exercicio6');
+        const exercicio7 = document.querySelector('.exercicio7');
+        const exercicio8 = document.querySelector('.exercicio8');
+        const exercicio9 = document.querySelector('.exercicio9');
+        const exercicio10 = document.querySelector('.exercicio10');
+        const exercicio11 = document.querySelector('.exercicio11');
 
         // 1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor 
         // informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, 
@@ -113,7 +123,11 @@
 
             const media = (nota1 + nota2) / 2;
 
-            document.write(`<p>A media das notas ${nota1} e ${nota2} é: ${media}</p>`);
+            if (media >= 9.5) {
+                document.write(`<p>APROVADO! Media das notas ${nota1} e ${nota2} é: ${media}</p>`);
+            } else {
+                document.write(`<p>REPROVADO! Media das notas ${nota1} e ${nota2} é: ${media}</p>`);
+            }
 
             const calcularNovaMedia = prompt('Calcular a média de outro aluno S/N?');
 
@@ -128,10 +142,89 @@
         // informado para qualquer uma das notas esteja fora do limite 
         // estabelecido, deve ser solicitado um novo valor ao usuário. 
         const funcaoExercicio7 = () => {
-            
+            let somaNotas = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                let nota = parseInt(prompt(`Digite a nota ${i}`));
+
+                while (nota > 10 || nota < 0) {
+                    const novaNota = parseInt(prompt('DIGITE UMA NOTA ENTRE 0 E 10!'));
+                    nota = novaNota
+                }
+
+                somaNotas = somaNotas + nota;
+            }
+
+            const media = somaNotas / 6;
+
+            alert(`A media das notas é: ${media}`);
         };
+        exercicio7.addEventListener('click', funcaoExercicio7);
 
+        // 8 - Ler um valor N e imprimir todos os valores inteiros entre 1 
+        // (inclusive) e N (inclusive). Considere que o N será sempre maior que ZERO.
+        // N  é um valor informado pelo usuário
+        const funcaoExercicio8 = () => {
+            let numero = parseInt(prompt('Digite um numero MAIOR que 0'));
 
+            while (numero < 0) {
+                numero = parseInt(prompt('DIGITE UM NUMERO MAIOR QUE 0'));
+            }
+
+            for (let i = 0; i <= numero; i++) {
+                document.write(`<p>Numero ${i}</p>`);
+            }
+        };
+        exercicio8.addEventListener('click', funcaoExercicio8);
+
+        // 9 - Escreva um algoritmo para imprimir os 10 
+        // primeiros números inteiros maiores que 100.
+        const funcaoExercicio9 = () => {
+            for (let i = 100; i <= 110; i++) {
+                document.write(`<p>Numero ${i}</p>`);
+            }
+        };
+        exercicio9.addEventListener('click', funcaoExercicio9);
+
+        // 10 - Escreva um programa para imprimir todas as 
+        // tabuadas de 1 a N. N será informado pelo usuário.
+        const funcaoExercicio10 = () => {
+            alert('Digite um numero para saber todas as tabuadas de 1 a N');
+
+            const numero = parseInt(prompt('Digite um numero'));
+
+            for (let i = 1; i <= numero; i++) {
+                document.write(`<h1>Tabuada do ${i}</h1>`);
+                for (let x = 0; x <= 10; x++) {
+                    const resultado = i * x;
+                    document.write(`<p>${i} x ${x} = ${resultado}</p>`);
+                }
+            }
+        };
+        exercicio10.addEventListener('click', funcaoExercicio10);
+
+        // 11 - Escreva um programa em que o usuário informe 10 valores
+        // e escreva quantos desses valores lidos estão entre os 
+        // números 24 e 42 (incluindo os valores 24 e 42) e quantos
+        // deles estão fora deste intervalo. 
+        const funcaoExercicio11 = () => {
+            let entre24e42 = 0;
+            let fora24e42 = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const numero = parseInt(prompt(`Digite o numero ${i}`));
+
+                if (numero >= 24 && numero <= 42) {
+                    entre24e42++
+                } else {
+                    fora24e42++
+                }
+            }
+
+            document.write(`<p>${entre24e42} numeros ESTAO entre 24 e 42</p>`);
+            document.write(`<p>${fora24e42} numeros NAO estao entre 24 e 42</p>`);
+        };
+        exercicio11.addEventListener('click', funcaoExercicio11);
 
     </script>
 </body>
