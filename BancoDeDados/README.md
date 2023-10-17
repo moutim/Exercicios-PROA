@@ -8,4 +8,7 @@ Os pacientes também precisam de cadastro, contendo dados pessoais (nome, data d
 As consultas também têm sido registradas em planilhas, com data e hora de realização, médico responsável, paciente, valor da consulta ou nome do convênio, com o número da carteira. Também é necessário indicar na consulta qual a especialidade buscada pelo paciente.
 
 Deseja-se ainda informatizar a receita do médico, de maneira que, no encerramento da consulta, ele possa registrar os medicamentos receitados, a quantidade e as instruções de uso. A partir disso, espera-se que o sistema imprima um relatório da receita ao paciente ou permita sua visualização via internet.
-![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/c4ca47b3-4a23-45c5-809d-5927162fe5dc)
+
+
+![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/ad53e568-b7cc-4a01-b546-fec3200d25da)
+
