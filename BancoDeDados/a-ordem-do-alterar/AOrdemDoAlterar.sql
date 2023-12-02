@@ -1,8 +1,13 @@
-# A Ordem do Alterar
+USE  `hospitalDB`;
 
-Pensando no banco que já foi criado para o Projeto do Hospital, realize algumas alterações nas tabelas e nos dados usando comandos de atualização e exclusão:
+ALTER TABLE Medicos
+ADD emAtividade VARCHAR(20);
 
-Crie um script que adicione uma coluna “em_atividade” para os médicos, indicando se ele ainda está atuando no hospital ou não. 
+UPDATE Medicos
+SET emAtividade = 'ativo'
+WHERE Medicos.idMedico IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-Crie um script para atualizar ao menos dois médicos como inativos e os demais em atividade.
+UPDATE Medicos
+SET emAtividade = 'inativo'
+WHERE Medicos.idMedico IN (11, 12, 13, 14, 15);
 
