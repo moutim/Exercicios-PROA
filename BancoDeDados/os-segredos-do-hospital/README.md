@@ -14,8 +14,8 @@ Também é necessário controlar quais profissionais de enfermaria estarão resp
 
 A internação, obviamente, é vinculada a um paciente – que pode se internar mais de uma vez no hospital – e a um único médico responsável.
 
+![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/3448bbac-bf77-469c-b40d-f9deccfb7d3a)
 
-![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/6c50fcdd-8e62-4250-b988-79f8594933f4)
 
 
 
