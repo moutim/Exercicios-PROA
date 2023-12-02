@@ -10,6 +10,7 @@ As consultas também têm sido registradas em planilhas, com data e hora de real
 Deseja-se ainda informatizar a receita do médico, de maneira que, no encerramento da consulta, ele possa registrar os medicamentos receitados, a quantidade e as instruções de uso. A partir disso, espera-se que o sistema imprima um relatório da receita ao paciente ou permita sua visualização via internet.
 
 
-![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/9ad27f5d-973c-4831-b4d4-75c7faca6623)
+![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/b50f47d2-9cba-4f8c-b28d-f51d3195e0cc)
+
 
 

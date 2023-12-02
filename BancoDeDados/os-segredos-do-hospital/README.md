@@ -1,4 +1,4 @@
-# Os Segredos do Hospital
+# Os Segredos do Hospital - PARTE 2
 
 Considere a seguinte descrição e o diagrama ER abaixo:
 
@@ -14,7 +14,8 @@ Também é necessário controlar quais profissionais de enfermaria estarão resp
 
 A internação, obviamente, é vinculada a um paciente – que pode se internar mais de uma vez no hospital – e a um único médico responsável.
 
+![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/3448bbac-bf77-469c-b40d-f9deccfb7d3a)
 
-![image](https://github.com/moutim/Exercicios-PROA/assets/88093439/9ad27f5d-973c-4831-b4d4-75c7faca6623)
+
 
 
