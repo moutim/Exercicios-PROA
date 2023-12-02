@@ -1,12 +1,12 @@
-# O Prisioneiro dos Dados  - PARTE 3
+# O Prisioneiro dos Dados  - PARTE 3 - Alimentando o banco
 
 Crie scripts de povoamento das tabelas desenvolvidas na atividade anterior
 Observe as seguintes atividades: 
-Inclua ao menos dez médicos de diferentes especialidades.
+* Inclua ao menos dez médicos de diferentes especialidades.
 
-Ao menos sete especialidades (considere a afirmação de que “entre as especialidades há pediatria, clínica geral, gastrenterologia e dermatologia”).
+* Ao menos sete especialidades (considere a afirmação de que “entre as especialidades há pediatria, clínica geral, gastrenterologia e dermatologia”).
 
-Inclua ao menos 15 pacientes.
+* Inclua ao menos 15 pacientes.
 
 * Registre 20 consultas de diferentes pacientes e diferentes médicos (alguns pacientes realizam mais que uma consulta). As consultas devem ter ocorrido entre 01/01/2015 e 01/01/2022. Ao menos dez consultas devem ter receituário com dois ou mais medicamentos.
 
