@@ -1,4 +1,4 @@
-# O Prisioneiro dos Dados  - PARTE 3
+# O Prisioneiro dos Dados  - PARTE 3 - Alimentando o banco
 
 Crie scripts de povoamento das tabelas desenvolvidas na atividade anterior
 Observe as seguintes atividades: 
