@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 4 - Um novo dia para Codar</title>
+</head>
+<body>
+    <button class="exercicio1">Exercicio 1</button>
+    <button class="exercicio2">Exercicio 2</button>
+    <button class="exercicio3">Exercicio 3</button>
+
+    <script>
+        const exercicio1 = document.querySelector('.exercicio1');
+        const exercicio2 = document.querySelector('.exercicio2');
+        const exercicio3 = document.querySelector('.exercicio3');
+
+        // 1
+        // Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles.
+        const funcaoExercicio1 = () => {
+            const listaAlunos = [];
+            let aluno;
+
+            do {
+                aluno = prompt("Qual aluno você deseja cadastrar?");
+                if (aluno !== "Pare") {
+                listaAlunos.push(aluno);
+                }
+            } while (aluno !== "Pare");
+            alert(`Voce cadastrou ${listaAlunos.length} alunos. ${listaAlunos}`);
+        };
+        exercicio1.addEventListener('click', funcaoExercicio1);
+
+        // 2
+        // Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"  e, em seguida, peça ao usuário para digitar o nome de um planeta. 
+
+        // Verifique se o planeta que o usuário informou está na array e informe ao usuário.
+        const funcaoExercicio2 = () => {
+            const listaPlanetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+            const usuarioInput = prompt("Digite um nome de planeta");
+
+            if (listaPlanetas.includes(usuarioInput)) {
+                alert(`O planeta ${usuarioInput} esta presente no array de planetas.
+                ${listaPlanetas}
+                `)
+            } else {
+                alert('O planeta que voce digitou não esta presente no array')
+            }
+        };
+        exercicio2.addEventListener('click', funcaoExercicio2);
+
+        // 3
+        // Vamos criar uma lista de compras. 
+
+        // Crie uma array de frutas, exiba-a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das frutas.
+
+        // Caso a fruta esteja no array, remova-a e exiba a mensagem "Fruta foi retirada da lista". 
+
+        // Peça novamente para o usuário digitar o nome de uma fruta para ser removida. 
+
+        // Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso mercado". 
+
+        // Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".
+        const funcaoExercicio3 = () => {
+            let listaFrutas = ["Maçã", "Banana", "Morango", "Pera", "Uva", "Abacaxi", "Melancia", "Kiwi", "Laranja", "Limão"];
+
+            alert(`A lista de frutas tem: ${listaFrutas.join(", ")}`);
+
+            while (listaFrutas.length > 0) {
+            
+                const usuarioFruta = prompt("Digite o nome de uma fruta!");
+
+                if (listaFrutas.includes(usuarioFruta)) {
+                    console.log('testeee');
+                    listaFrutas = listaFrutas.filter((fruta) => fruta !== usuarioFruta);
+                    alert(`${usuarioFruta} foi retirada da lista.`);
+                } else {
+                    alert("Fruta indisponível no nosso mercado.");
+                }
+
+                if (listaFrutas.length > 0) {
+                    alert(`A lista de frutas agora tem: ${listaFrutas.join(", ")}`);
+                }
+            }
+
+            alert("Lista de compras finalizada.");
+        };
+        exercicio3.addEventListener('click', funcaoExercicio3);
+    </script>
+</body>
+</html>
