@@ -70,15 +70,15 @@ INSERT INTO Pacientes (nome, CPF, RG, dataDeNascimento, endereco, telefone, emai
 ('Ana Oliveira', 78901234567, 12345678, '1995-12-15', 'Rua das Flores - 123', '(11) 98765-4321', 'anaoliveira@gmail.com', 3),
 ('Carlos Silva', 98765432109, 87654321, '1988-05-18', 'Avenida Principal - 456', '(11) 87654-3210', 'carlossilva@gmail.com', 1),
 ('Mariana Pereira', 21098765432, 98765432, '1976-02-18', 'Rua dos Bosques - 789', '(11) 23456-7890', 'marianapereira@gmail.com', 4),
-('Pedro Souza', 54321098765, 34567890, '1990-07-30', 'Travessa das Ruas - 56', '(11) 76543-2109', 'pedrosouza@gmail.com', 5),
+('Pedro Souza', 54321098765, 34567890, '2008-07-30', 'Travessa das Ruas - 56', '(11) 76543-2109', 'pedrosouza@gmail.com', 5),
 ('Lucia Martins', 67890123456, 23456789, '1985-11-05', 'Praça da Liberdade - 987', '(11) 32109-8765', 'luciamartins@gmail.com', 2),
-('Rodrigo Lima', 78901234567, 45678901, '1972-09-12', 'Rua da Esperança - 654', '(11) 65432-1098', 'rodrigolima@gmail.com', 3),
-('Fernanda Almeida', 87654321098, 56789012, '1998-04-03', 'Alameda dos Sonhos - 321', '(11) 89012-3456', 'fernandaalmeida@gmail.com', 1),
-('Gabriel Costa', 98765432109, 67890123, '1983-06-22', 'Avenida das Estrelas - 876', '(11) 21098-7654', 'gabrielcosta@gmail.com', 4),
+('Rodrigo Lima', 78901234567, 45678901, '2009-09-12', 'Rua da Esperança - 654', '(11) 65432-1098', 'rodrigolima@gmail.com', 3),
+('Fernanda Almeida', 87654321098, 56789012, '2012-04-03', 'Alameda dos Sonhos - 321', '(11) 89012-3456', 'fernandaalmeida@gmail.com', 1),
+('Gabriel Costa', 98765432109, 67890123, '2014-06-22', 'Avenida das Estrelas - 876', '(11) 21098-7654', 'gabrielcosta@gmail.com', 4),
 ('Isabela Santos', 34567890120, 78901234, '1992-01-14', 'Rua do Progresso - 543', '(11) 43210-9876', 'isabelasantos@gmail.com', 5),
 ('Rafaela Oliveira', 56789012345, 89012345, '1978-07-28', 'Travessa dos Sonhos - 210', '(11) 98765-4321', 'rafaelaoliveira@gmail.com', 2),
 ('Luiz Pereira', 67890123456, 23456789, '1987-04-09', 'Avenida das Flores - 987', '(11) 87654-3210', 'luizpereira@gmail.com', 3),
-('Júlia Martins', 78901234567, 45678901, '1993-10-17', 'Rua da Alegria - 654', '(11) 10987-6543', 'juliamartins@gmail.com', 1),
+('Júlia Martins', 78901234567, 45678901, '2006-10-17', 'Rua da Alegria - 654', '(11) 10987-6543', 'juliamartins@gmail.com', 1),
 ('Vinícius Souza', 98765432109, 56789012, '1981-12-05', 'Praça da Harmonia - 321', '(11) 54321-0987', 'viniciussouza@gmail.com', 4),
 ('Camile Santana Moutim', 27707622812, 260823, '2003-03-20', 'Avenida da Paz - 987', '(11) 87654-3210', 'camilemoutim@gmail.com', 5);
 
@@ -129,25 +129,32 @@ INSERT INTO Quartos (numero, idTipoQuarto) VALUES
 (10, 4);
 
 INSERT INTO Internacoes (dataEntrada, dataPrevistaAlta, dataAlta, procedimento, idQuarto, idPaciente, idMedico) VALUES
-('2016-03-10', '2016-04-15', '2016-04-12', 'Cirurgia de apêndice', 1, 1, 2),
+('2016-03-10', '2016-04-12', '2016-04-15', 'Cirurgia de apêndice', 1, 1, 2),
 ('2017-07-05', '2017-08-10', '2017-08-05', 'Tratamento de fratura', 2, 1, 3),
-('2018-11-20', '2018-12-25', '2018-12-23', 'Cirurgia de hérnia', 3, 3, 4),
-('2019-02-15', '2019-03-20', '2019-03-18', 'Angioplastia coronária', 4, 3, 5),
+('2018-11-20', '2018-12-23', '2018-12-25', 'Cirurgia de hérnia', 3, 3, 4),
+('2019-02-15', '2019-03-18', '2019-03-20', 'Angioplastia coronária', 4, 3, 5),
 ('2016-06-25', '2016-07-30', '2016-07-28', 'Apendicectomia', 1, 5, 6),
 ('2017-09-12', '2017-10-17', '2017-10-15', 'Cirurgia de catarata', 2, 6, 7),
 ('2018-04-03', '2018-05-08', '2018-05-06', 'Colecistectomia', 3, 7, 8),
-('2019-12-18', '2020-01-22', '2020-01-20', 'Cirurgia de próstata', 4, 8, 9),
+('2019-12-18', '2020-01-20', '2020-01-22', 'Cirurgia de próstata', 4, 8, 9),
 ('2015-02-28', '2015-04-05', '2015-04-02', 'Histerectomia', 1, 9, 10),
 ('2016-10-10', '2016-11-15', '2016-11-10', 'Cirurgia de joelho', 2, 10, 11);
 
 INSERT INTO InternacoesEnfermeiros (idInternacao, idEnfermeiro) VALUES 
 (1, 1),
+(2, 1),
+(3, 1),
 (2, 2),
 (3, 3),
+(4, 3),
 (4, 4),
 (5, 5),
+(6, 5),
+(7, 5),
+(8, 5),
 (6, 6),
 (7, 7),
+(8, 7),
 (8, 8),
 (9, 9),
 (10, 10);
